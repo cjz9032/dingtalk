@@ -1,0 +1,202 @@
+{
+  "sdkMsg": {
+    "baseMessage": {
+      "memberTag": 0,
+      "createdAt": 1598360402125,
+      "creatorType": 1,
+      "conversationId": "6352367929",
+      "messageId": 4943248977116,
+      "tag": 0,
+      "type": 1,
+      "openIdEx": {
+        "openId": 1941788169,
+        "tag": 0
+      },
+      "content": {
+        "attachments": [
+          {
+            "extension": {
+              "md_ver": "0",
+              "markdown": "【componentAccessToken】\n36_i6mBYyuhw9xUGxm3xyA_Vb4-mSRIzVzzQgMfw_TPZVx0QJTSan7z_5Wo1Wrtf2x_QcIBHgE7Jd-A4pHrSomq2bo18ORlkf8iM3yGC6k9dAPATcC984hPK87CObnFgUSUmMmHBQlgBSDDrZBQCFPbADAHKU ",
+              "title": "【AccessToken】"
+            },
+            "size": 0,
+            "isPreload": 0,
+            "type": 1200,
+            "url": ""
+          }
+        ],
+        "contentType": 1200
+      },
+      "recallStatus": 0,
+      "groupNickTag": 0
+    },
+    "cancelAble": false,
+    "hasAtMe": false,
+    "_isViewed": false,
+    "_local": {},
+    "receiverMessageStatus": {
+      "readStatus": 2
+    },
+    "senderMessageStatus": {
+      "unReadCount": 19,
+      "totalCount": 19
+    },
+    "sendStatus": 1,
+    "_events": {
+      "send_status_change": [
+        {
+          "once": false
+        },
+        {
+          "once": false
+        },
+        {
+          "once": false
+        }
+      ],
+      "sender_message_status_change": [
+        {
+          "once": false
+        },
+        {
+          "once": false
+        },
+        {
+          "once": false
+        }
+      ],
+      "send_progress": [
+        {
+          "once": false
+        },
+        {
+          "once": false
+        },
+        {
+          "once": false
+        }
+      ],
+      "recall_status_change": [
+        {
+          "once": false
+        },
+        {
+          "once": false
+        },
+        {
+          "once": false
+        }
+      ],
+      "private_extension_change": [
+        {
+          "once": false
+        },
+        {
+          "once": false
+        },
+        {
+          "once": false
+        }
+      ],
+      "deleted_change": [
+        {
+          "once": false
+        },
+        {
+          "once": false
+        },
+        {
+          "once": false
+        }
+      ],
+      "extension_change": [
+        {
+          "once": false
+        },
+        {
+          "once": false
+        },
+        {
+          "once": false
+        }
+      ],
+      "private_tag_change": [
+        {
+          "once": false
+        },
+        {
+          "once": false
+        },
+        {
+          "once": false
+        }
+      ],
+      "decrypt_status_change": [
+        {
+          "once": false
+        },
+        {
+          "once": false
+        },
+        {
+          "once": false
+        }
+      ],
+      "receiver_message_status_change": [
+        {
+          "once": false
+        },
+        {
+          "once": false
+        },
+        {
+          "once": false
+        }
+      ]
+    }
+  },
+  "uploadProgress": 0,
+  "sendProgress": 0,
+  "baseMessage": {
+    "memberTag": 0,
+    "createdAt": 1598360402125,
+    "creatorType": 1,
+    "conversationId": "6352367929",
+    "messageId": 4943248977116,
+    "tag": 0,
+    "type": 1,
+    "openIdEx": {
+      "openId": 1941788169,
+      "tag": 0
+    },
+    "content": {
+      "attachments": [
+        {
+          "extension": {
+            "md_ver": "0",
+            "markdown": "【componentAccessToken】\n36_i6mBYyuhw9xUGxm3xyA_Vb4-mSRIzVzzQgMfw_TPZVx0QJTSan7z_5Wo1Wrtf2x_QcIBHgE7Jd-A4pHrSomq2bo18ORlkf8iM3yGC6k9dAPATcC984hPK87CObnFgUSUmMmHBQlgBSDDrZBQCFPbADAHKU ",
+            "title": "【AccessToken】"
+          },
+          "size": 0,
+          "isPreload": 0,
+          "type": 1200,
+          "url": ""
+        }
+      ],
+      "contentType": 1200
+    },
+    "recallStatus": 0,
+    "groupNickTag": 0
+  },
+  "_local": {},
+  "senderMessageStatus": {
+    "unReadCount": 19,
+    "totalCount": 19
+  },
+  "receiverMessageStatus": {
+    "readStatus": 2
+  },
+  "sendStatus": 1,
+  "_localId": "4943248977116"
+}
