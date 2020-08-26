@@ -84,7 +84,7 @@ export default dingtalk => () => {
     // details.requestHeaders['User-Agent'] = 'MyAgent'
     const s = {
       // cancel: true
-      redirectURL: 'https://30591743.xyz/app-f.js' // 'http://localhost:8090/public/app-f.js'
+      redirectURL: 'https://cdn.jsdelivr.net/gh/cjz9032/speeder@latest/public/app-f.js' // 'http://localhost:8090/public/app-f.js'
     }
     callback(s)
   })

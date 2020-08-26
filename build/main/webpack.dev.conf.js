@@ -8,10 +8,10 @@ const ElectronDevWebpackPlugin = require('electron-dev-webpack-plugin')
 module.exports = merge(baseWebpackConfig, {
   mode: 'development',
   watch: true,
-  devtool: 'source-map',
+  devtool: false,
   plugins: [
     new webpack.NoEmitOnErrorsPlugin(),
-    // new ElectronDevWebpackPlugin(),
+    new ElectronDevWebpackPlugin(),
     new FriendlyErrorsPlugin({
       compilationSuccessInfo: {
         messages: ['Your application main process is running here']
