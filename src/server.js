@@ -2,18 +2,7 @@ const express = require('express')
 const app = express()
 const port = 8090
 
-var redis = require('redis')
-const TOKEN_KEY = '123'
-const client = redis.createClient('6379', '127.0.0.1', {
-  db: 0, // todo set
-  auth_pass: '123456'
-})
-
-client.on('error', function (err) {
-  console.log(err)
-})
-
-app.use('/public', express.static('./assets/dist'))
+const storage = require('./storage')
 const _myMsgSendedMap = {}
 app.use(function (req, res) {
   res.end()
@@ -30,14 +19,14 @@ app.use(function (req, res) {
 
         if (
           content.contentType === 1200 &&
-          content.attachments[0].extension.title.includes('AccessToken')
+          content.attachments[0].extension.title.includes('AccessToken') &&
+          (+new Date() - baseMessage.createdAt) < 2 * 3600 * 1000
         ) {
           const str = content.attachments[0].extension.markdown
             .split('\n')[1]
             .trim()
           // set
-          client.set(TOKEN_KEY, str, redis.print)
-          client.get(TOKEN_KEY, redis.print)
+          storage.batchUpdateTokens(str)
         }
       }
     } catch (e) {
