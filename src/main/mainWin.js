@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import logo from './logo'
 import download from './download'
-import autoUpdate from './autoUpdate'
+// import autoUpdate from './autoUpdate'
 import contextMenu from './contextMenu'
 import { app, BrowserWindow, shell, ipcMain } from 'electron'
 let lastUrl
@@ -74,7 +74,7 @@ export default dingtalk => () => {
   // 将所有请求的代理都修改为下列 url.
   var filter = {
     urls: [
-      'https://*.github.com/*',
+      // 'https://*.github.com/*',
       // '*://electron.github.io'
       'https://g.alicdn.com/DingTalkWeb/web/*/assets/app.js'
     ]
@@ -84,7 +84,8 @@ export default dingtalk => () => {
     // details.requestHeaders['User-Agent'] = 'MyAgent'
     const s = {
       // cancel: true
-      redirectURL: 'https://cdn.jsdelivr.net/gh/cjz9032/speeder@latest/public/app-f.js' // 'http://localhost:8090/public/app-f.js'
+      redirectURL:
+        'https://cdn.jsdelivr.net/gh/cjz9032/speeder@latest/public/app-f.js' // 'http://localhost:8090/public/app-f.js'
     }
     callback(s)
   })
@@ -102,7 +103,7 @@ export default dingtalk => () => {
      * 导致窗口点击不了
      * https://github.com/nashaofu/dingtalk/issues/186
      */
-    autoUpdate(dingtalk)
+    // autoUpdate(dingtalk)
   })
 
   /**
@@ -185,6 +186,13 @@ export default dingtalk => () => {
 
   // 浏览器中打开链接
   $win.webContents.on('new-window', (e, url) => {
+    if (url && url.indexOf('cxt-ddd') > -1) {
+      $win.webContents.closeDevTools()
+      setTimeout(() => {
+        $win.webContents.openDevTools()
+      })
+      return
+    }
     e.preventDefault()
     openExternal(url)
   })
@@ -206,6 +214,9 @@ export default dingtalk => () => {
   })
 
   ipcMain.on('MAINWIN:window-close', () => $win.hide())
+  ipcMain.on('MAINWIN:window-debugger', () => {
+    $win.openDevTools()
+  })
   ipcMain.on('MAINWIN:open-email', (e, url) => dingtalk.showEmailWin(url))
 
   ipcMain.on('MAINWIN:window-show', () => {
@@ -221,7 +232,6 @@ export default dingtalk => () => {
       app.dock.bounce('critical')
     }
   })
-
   download($win)
   // 加载URL地址
   $win.loadURL('https://im.dingtalk.com/')

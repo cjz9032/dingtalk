@@ -5,7 +5,7 @@ export default () => {
   $ul.setAttribute('class', 'dingtalk-window-operations')
 
   // 按钮className，同时也是事件名称
-  const li = ['window-close', 'window-maximization', 'window-minimize']
+  const li = ['window-close', 'window-maximization', 'window-minimize', 'window-debugger']
   li.forEach(item => {
     // 创建按钮
     const $li = document.createElement('li')

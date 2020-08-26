@@ -17,6 +17,7 @@
     "build:preload": "webpack --config build/preload/webpack.prod.conf.js",
     "build:renderer": "webpack --config build/renderer/webpack.prod.conf.js",
     "pack": "electron-builder",
+    "pack-mi": "ELECTRON_MIRROR=https://npm.taobao.org/mirrors/electron/ npm run pack",
     "release": "electron-builder"
   },
   "keywords": [
